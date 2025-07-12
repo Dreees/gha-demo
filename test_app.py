@@ -26,4 +26,4 @@ def test_correct_item():
 def test_wrong_item():
     json_blob = {"name": "shampoo", "price": -1.5}
     resp = client.post("/items/", json=json_blob)
-    assert resp.status_code != 200 
+    assert resp.status_code != 200

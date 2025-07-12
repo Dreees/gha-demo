@@ -42,4 +42,4 @@ def sleep_slow():
 @app.get("/sleep_fast")
 async def sleep_fast():
     _ = await asyncio.sleep(1)
-    return {"status": "done"} 
+    return {"status": "done"}
