@@ -1,5 +1,4 @@
 from starlette.testclient import TestClient
-
 from app import app
 
 client = TestClient(app)
@@ -9,7 +8,8 @@ def test_root_endpoint():
     resp = client.get("/")
     assert resp.status_code == 200
     assert resp.json() == {"message": "hello world again"}
-    
+
+
 def test_users_endpoint():
     resp = client.get("/users/1")
     assert resp.status_code == 200
